@@ -1,3 +1,5 @@
+package mask;
+
 public final class EmployeeBoolFieldMask {
     public boolean id;
     public boolean name;
@@ -16,7 +18,7 @@ public final class EmployeeBoolFieldMask {
      * @param workload employee workload mask
      * @param role employee role mask
      */
-    EmployeeBoolFieldMask(boolean id, boolean name, boolean department, boolean workload, boolean role) {
+    public EmployeeBoolFieldMask(boolean id, boolean name, boolean department, boolean workload, boolean role) {
         this.id = id;
         this.name = name;
         this.department = department;

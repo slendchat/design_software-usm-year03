@@ -1,3 +1,10 @@
+package repository;
+
+import mask.EmployeeBitMask;
+import model.Employee;
+import model.Role;
+import util.EmployeeUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

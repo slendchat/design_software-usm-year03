@@ -1,3 +1,5 @@
+package mask;
+
 public class EmployeeBitMask {
 
     public static final int ID          = 1 << 0;

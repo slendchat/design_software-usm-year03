@@ -1,7 +1,14 @@
+package util;
+
+import mask.EmployeeBitMask;
+import mask.EmployeeBoolFieldMask;
+import model.Employee;
+import model.Role;
+
 public class EmployeeUtils {
 
     public static String toBoolMaskedString(Employee employee, EmployeeBoolFieldMask mask) {
-        StringBuilder sb = new StringBuilder("Employee{");
+        StringBuilder sb = new StringBuilder("model.Employee{");
         if (mask.id) sb.append("id=").append(employee.getId()).append(", ");
         if (mask.name) sb.append("name=").append(employee.getName()).append(", ");
         if (mask.department) sb.append("department=").append(employee.getDepartment()).append(", ");
@@ -12,7 +19,7 @@ public class EmployeeUtils {
     }
 
     public static String toBitMaskedString(Employee employee, EmployeeBitMask mask) {
-        StringBuilder sb = new StringBuilder("Employee{");
+        StringBuilder sb = new StringBuilder("model.Employee{");
         if (mask.has(EmployeeBitMask.ID)) sb.append("id=").append(employee.getId()).append(", ");
         if (mask.has(EmployeeBitMask.NAME)) sb.append("name=").append(employee.getName()).append(", ");
         if (mask.has(EmployeeBitMask.DEPARTMENT)) sb.append("department=").append(employee.getDepartment()).append(", ");

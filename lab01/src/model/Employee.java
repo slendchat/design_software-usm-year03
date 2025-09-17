@@ -1,3 +1,4 @@
+package model;
 
 //Domain model class
 public final class Employee {
@@ -6,7 +7,6 @@ public final class Employee {
     private int id;
     private String name;
     private String Department;
-    public Employee(int id, String name, String Department, double Salary) {}
     private float workload;
     private Role role;
     public Employee(String name, String department, float workload, Role role) {
@@ -29,7 +29,7 @@ public final class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "model.Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", department='" + Department + '\'' +
