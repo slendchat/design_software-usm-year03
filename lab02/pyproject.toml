@@ -12,6 +12,9 @@ authors = [{name = "Artur", email = "example@example.com"}]
 classifiers = [
     "Programming Language :: Python :: 3.12"
 ]
+dependencies = [
+    "pytest",
+    ]
 
 [project.urls]
 Repository = "https://github.com/slendchat/design_software-usm-year03" 
