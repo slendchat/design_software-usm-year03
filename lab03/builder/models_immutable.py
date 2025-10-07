@@ -1,37 +1,36 @@
 from __future__ import annotations
-from typing import Optional
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class Course_immutable:
   title: str
   description: str
-  groups: Optional[tuple[Group_immutable, ...]] = None
-  subjects: Optional[tuple[Subject_immutable, ...]] = None
+  groups: tuple[Group_immutable, ...]
+  subjects: tuple[Subject_immutable, ...]
 
 @dataclass(frozen=True)
 class Group_immutable:
   name: str
-  students: Optional[tuple[Student_immutable, ...]] = None
-  course: Optional[Course_immutable] = None
+  students: tuple[Student_immutable, ...]
+  course: Course_immutable
 
 @dataclass(frozen=True)
 class Subject_immutable:
   name: str
-  course: Optional[Course_immutable] = None
-  teacher: Optional[Teacher_immutable] = None
-  groups: Optional[tuple[Group_immutable, ...]] = None
+  course: Course_immutable
+  teacher: Teacher_immutable
+  groups: tuple[Group_immutable, ...]
 
 @dataclass(frozen=True)
 class Teacher_immutable:
   name: str
-  subject: Optional[Subject_immutable] = None
+  subject: Subject_immutable
 
 @dataclass(frozen=True)
 class Student_immutable:
   name: str
   age: int
   grade: int
-  group: Optional[tuple[Group_immutable, ...]] = None
-  subjects: Optional[tuple[Subject_immutable, ...]] = None
-  teachers: Optional[tuple[Teacher_immutable, ...]] = None
+  group: tuple[Group_immutable, ...]
+  subjects: tuple[Subject_immutable, ...]
+  teachers: tuple[Teacher_immutable, ...]

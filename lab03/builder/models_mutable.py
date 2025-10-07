@@ -12,18 +12,12 @@ class Course:
   def __init__(self, title:str, description:str):
     self.title = title
     self.description = description
-    self.groups = []
-    self.subjects = []
 
 class Group:
   def __init__(self, name:str):
     self.name = name
     self.students = []
     self.course = None
-    
-    def add_student(self, student:Student):
-      self.students.append(student)
-      student.group = self
 
 class Subject:
   def __init__(self, name:str):

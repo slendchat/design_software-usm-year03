@@ -1,6 +1,6 @@
 # House owners area, change something calculate pipeline
 from abc import ABC, abstractmethod
-from typing import Generic, TypeVar, List, Optional
+from typing import Generic, TypeVar
 
 TContext = TypeVar("TContext")
 
