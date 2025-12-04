@@ -76,6 +76,39 @@ python3 -m student_pipeline.main \
 ## 9. Пример данных
 В `src/sample_students.json` есть 4 записи.
 
+```json
+[
+    {
+        "student_id": "S001",
+        "full_name": "Alice Taylor",
+        "group": "CS-01",
+        "average_score": 8.7,
+        "credits": 45
+    },
+    {
+        "student_id": "S002",
+        "full_name": "Bob Martinez",
+        "group": "CS-02",
+        "average_score": 7.9,
+        "credits": 40
+    },
+    {
+        "student_id": "S003",
+        "full_name": "Chandra Nguyen",
+        "group": "ENG-01",
+        "average_score": 9.3,
+        "credits": 52
+    },
+    {
+        "student_id": "S004",
+        "full_name": "Dmitri Luca",
+        "group": "CS-01",
+        "average_score": 6.8,
+        "credits": 35
+    }
+]
+```
+
 ## 10. Как работает
 Алгоритм прост:
 1. Собираем конфиг из консоли (все в `main.py`).
@@ -91,3 +124,14 @@ python3 -m student_pipeline.main \
 - JSON writer пишет pretty с отступами, CSV writer фиксирует порядок колонок.
 - Plain text writer просто удобен для глаз, когда надо глянуть что происходит.
 - Контейнер возвращает одно и то же (singletons), значит стоит аккуратно использовать, но у нас нет mutable state в сервиса, так что норм.
+
+## 12. Как запустить
+Тест:
+1. Перейти в `src` 
+  ```
+  cd lab05/src/
+  ```
+2. Запустить скрипт:
+  ```
+  python3 -m student_pipeline.main --source random --destination json --output sample_output.json
+  ```
