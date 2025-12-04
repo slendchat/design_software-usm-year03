@@ -1,0 +1,30 @@
+[
+    {
+        "student_id": "S001",
+        "full_name": "Alice Taylor",
+        "group": "CS-01",
+        "average_score": 8.7,
+        "credits": 45
+    },
+    {
+        "student_id": "S002",
+        "full_name": "Bob Martinez",
+        "group": "CS-02",
+        "average_score": 7.9,
+        "credits": 40
+    },
+    {
+        "student_id": "S003",
+        "full_name": "Chandra Nguyen",
+        "group": "ENG-01",
+        "average_score": 9.3,
+        "credits": 52
+    },
+    {
+        "student_id": "S004",
+        "full_name": "Dmitri Luca",
+        "group": "CS-01",
+        "average_score": 6.8,
+        "credits": 35
+    }
+]

@@ -34,3 +34,7 @@ bin/
 *pipeline.egg-info
 *__pycache__/
 *build/
+
+
+*simple_explanation.md
+*/sample_output*
